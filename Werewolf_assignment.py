@@ -66,13 +66,9 @@ while villagers >0:
     role_names.append(f"Villager {villagers}")
     villagers -= 1
 
-randomised_roles = []
 
-while randomised_roles_count > 0:
-    role_temp = random.choice(role_names)
-    if role_temp not in randomised_roles:
-        randomised_roles.append(role_temp)
-        randomised_roles_count -= 1
+randomised_roles = random.shuffle(role_names)
+
 
 #print(f" randomised roles are {randomised_roles}")
 
